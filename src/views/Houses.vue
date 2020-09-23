@@ -3,10 +3,7 @@
     <h1>Houses</h1>
     <md-card v-for="house in houses" :key="house._id">
       <md-card-header>
-        <div class="md-title">
-          Address: {{ house.address }}, owner: {{ house.owner }}, price:
-          {{ house.owner }}
-        </div>
+        <div class="md-title">Address: {{ house.address }}</div>
       </md-card-header>
 
       <md-card-actions>
@@ -16,6 +13,7 @@
         <md-button>Delete</md-button>
       </md-card-actions>
     </md-card>
+    <div v-if="!houses.length">No data</div>
   </div>
 </template>
 

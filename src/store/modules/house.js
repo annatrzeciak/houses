@@ -19,5 +19,12 @@ export default {
         })
         .catch((err) => Promise.reject(err.response));
     },
+    getHouseDetail: async (context, houseId) => {
+      return House.getHouse(houseId)
+        .then((success) => {
+          return Promise.resolve(success.data);
+        })
+        .catch((err) => Promise.reject(err.response));
+    },
   },
 };
