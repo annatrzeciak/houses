@@ -1,6 +1,8 @@
 <template>
   <div class="houses">
     <h1>Houses</h1>
+    <router-link class="md-primary" to="/add-house" tag="md-button">Add house</router-link>
+
     <md-card v-for="house in houses" :key="house._id">
       <md-card-header>
         <div class="md-title">Address: {{ house.address }}</div>

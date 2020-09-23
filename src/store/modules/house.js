@@ -26,5 +26,23 @@ export default {
         })
         .catch((err) => Promise.reject(err.response));
     },
+
+    deleteHouse: async (context, houseId) => {
+      return House.deleteHouse(houseId)
+          .then((success) => {
+            return Promise.resolve(success.data);
+          })
+          .catch((err) => Promise.reject(err.response));
+    },
+
+    addHouse: async (context, data) => {
+      return House.addHouse(data)
+          .then((success) => {
+            return Promise.resolve(success.data);
+          })
+          .catch((err) => Promise.reject(err.response));
+    },
+
+
   },
 };
