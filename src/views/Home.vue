@@ -43,7 +43,7 @@
             />
           </div>
         </div>
-        <div class="row">
+        <div class="row sentence-row">
           <div class="col">
             <img
               src="./../assets/people.jpg"
@@ -196,7 +196,7 @@ img.fill-col {
 .boards-background p:before {
   content: "";
   width: 8px;
-  height: 1px;
+  height: 2px;
   background: #252525;
   display: inline-block;
   position: absolute;
@@ -212,5 +212,37 @@ img.fill-col {
   position: absolute;
   left: calc(50% - 4px);
   bottom: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  main > .row {
+    flex-direction: column;
+  }
+  main > .row > .col {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main .row {
+    flex-direction: column;
+  }
+  main .row .col {
+    width: 100%;
+  }
+  main .sentence-row .col:first-of-type {
+    order: 2;
+  }
+  main .sentence-row .col:nth-of-type(2) {
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  main .row .col h2.col-title {
+    font-size: 22px;
+  }
+  .row .col .content {
+    padding: 25px;
+  }
 }
 </style>
